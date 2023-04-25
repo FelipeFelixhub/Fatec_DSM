@@ -1,7 +1,7 @@
 ## FATEC Desenvolvimento de Software Multiplataforma
-# Repositorio para armazenar os as atividades realizadas durante o curos
+## Repositorio para armazenar os as atividades realizadas durante o curos
 
-# Tecnologias utilizadas
+### Tecnologias utilizadas
 - JAVA
 - C++
 - PHP
