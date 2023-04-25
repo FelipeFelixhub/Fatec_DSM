@@ -1,5 +1,5 @@
 ## FATEC Desenvolvimento de Software Multiplataforma
-## Repositorio para armazenar os as atividades realizadas durante o curos
+## Repositorio para armazenar as atividades realizadas durante o curso
 
 ### Tecnologias utilizadas
 - JAVA
