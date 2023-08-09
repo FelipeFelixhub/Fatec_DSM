@@ -3,5 +3,8 @@
 
 ### Tecnologias utilizadas
 - JAVA
-- C++
 - PHP
+- C++
+- C#
+- VB.NET
+
