@@ -12,3 +12,5 @@ C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\prj_cadastro.exe
 C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\prj_cadastro.xml
 C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\prj_cadastro.pdb
 C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\prj_cadastro.frm_clientes.resources
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\Interop.ADODB.dll
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro\obj\Debug\prj_cadastro.vbproj.ResolveComReference.cache
