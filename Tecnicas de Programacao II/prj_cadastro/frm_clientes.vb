@@ -21,4 +21,27 @@
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
 
     End Sub
+
+    Private Sub btn_gravar_Click(sender As Object, e As EventArgs) Handles btn_gravar.Click
+        Try
+            SQL = "select * from cadastro where cpf= '" & txt_cpf.Text & "'"
+            rs = db.Execute(SQL)
+            If rs.EOF = True Then 'Se nao existir o cpf entao'
+                SQL = "insert into cadastro (cpf,nome,foto) values ('" & txt_cpf.Text & "'," &
+                    "'" & txt_nome.Text & "','" & diretorio & "')"
+                rs = db.Execute(UCase(SQL))
+                MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
+                txt_cpf.Clear()
+                txt_nome.Clear()
+                img_foto.Load(Application.StartupPath & "\Fotos\nova_foto.png")
+                txt_cpf.Focus()
+            Else
+                MsgBox("CPF já cadastrado!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
+                Exit Sub
+            End If
+
+        Catch ex As Exception
+            MsgBox("Erro ao gravar!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+        End Try
+    End Sub
 End Class

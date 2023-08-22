@@ -25,17 +25,17 @@ Partial Class frm_clientes
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_clientes))
         Me.img_foto = New System.Windows.Forms.PictureBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
-        Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
+        Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.txt_nome = New System.Windows.Forms.TextBox()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.txt_nome = New System.Windows.Forms.TextBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
@@ -59,22 +59,22 @@ Partial Class frm_clientes
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.ToolStripButton2, Me.ToolStripButton3})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
         Me.ToolStrip1.TabIndex = 1
         Me.ToolStrip1.Text = "ToolStrip1"
         '
-        'ToolStripButton1
+        'btn_gravar
         '
-        Me.ToolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton1.Image = CType(resources.GetObject("ToolStripButton1.Image"), System.Drawing.Image)
-        Me.ToolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton1.Name = "ToolStripButton1"
-        Me.ToolStripButton1.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton1.Text = "ToolStripButton1"
-        Me.ToolStripButton1.ToolTipText = "GRAVAR"
+        Me.btn_gravar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.btn_gravar.Image = CType(resources.GetObject("btn_gravar.Image"), System.Drawing.Image)
+        Me.btn_gravar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.btn_gravar.Name = "btn_gravar"
+        Me.btn_gravar.Size = New System.Drawing.Size(23, 22)
+        Me.btn_gravar.Text = "ToolStripButton1"
+        Me.btn_gravar.ToolTipText = "GRAVAR"
         '
         'ToolStripButton2
         '
@@ -125,25 +125,22 @@ Partial Class frm_clientes
         Me.TabPage1.Text = "DADOS PESSOAIS"
         Me.TabPage1.UseVisualStyleBackColor = True
         '
-        'TabPage2
+        'Label2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(765, 371)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "LISTAGEM GERAL"
-        Me.TabPage2.UseVisualStyleBackColor = True
+        Me.Label2.AutoSize = True
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(55, 119)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(121, 13)
+        Me.Label2.TabIndex = 4
+        Me.Label2.Text = "NOME DO CLIENTE"
         '
-        'txt_cpf
+        'txt_nome
         '
-        Me.txt_cpf.Location = New System.Drawing.Point(49, 65)
-        Me.txt_cpf.Mask = "999,999,999-99"
-        Me.txt_cpf.Name = "txt_cpf"
-        Me.txt_cpf.Size = New System.Drawing.Size(134, 20)
-        Me.txt_cpf.TabIndex = 1
-        Me.txt_cpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
+        Me.txt_nome.Location = New System.Drawing.Point(49, 135)
+        Me.txt_nome.Name = "txt_nome"
+        Me.txt_nome.Size = New System.Drawing.Size(440, 20)
+        Me.txt_nome.TabIndex = 3
         '
         'Label1
         '
@@ -155,22 +152,25 @@ Partial Class frm_clientes
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "CPF DO CLIENTE"
         '
-        'txt_nome
+        'txt_cpf
         '
-        Me.txt_nome.Location = New System.Drawing.Point(49, 135)
-        Me.txt_nome.Name = "txt_nome"
-        Me.txt_nome.Size = New System.Drawing.Size(440, 20)
-        Me.txt_nome.TabIndex = 3
+        Me.txt_cpf.Location = New System.Drawing.Point(49, 65)
+        Me.txt_cpf.Mask = "999,999,999-99"
+        Me.txt_cpf.Name = "txt_cpf"
+        Me.txt_cpf.Size = New System.Drawing.Size(134, 20)
+        Me.txt_cpf.TabIndex = 1
+        Me.txt_cpf.TextAlign = System.Windows.Forms.HorizontalAlignment.Center
         '
-        'Label2
+        'TabPage2
         '
-        Me.Label2.AutoSize = True
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(55, 119)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(121, 13)
-        Me.Label2.TabIndex = 4
-        Me.Label2.Text = "NOME DO CLIENTE"
+        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(765, 371)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "LISTAGEM GERAL"
+        Me.TabPage2.UseVisualStyleBackColor = True
         '
         'DataGridView1
         '
@@ -189,7 +189,7 @@ Partial Class frm_clientes
         Me.Controls.Add(Me.ToolStrip1)
         Me.Name = "frm_clientes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "FORMULARIO DE CLIENTES"
+        Me.Text = "CADASTRO DE CLIENTES"
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ToolStrip1.ResumeLayout(False)
         Me.ToolStrip1.PerformLayout()
@@ -205,7 +205,7 @@ Partial Class frm_clientes
 
     Friend WithEvents img_foto As PictureBox
     Friend WithEvents ToolStrip1 As ToolStrip
-    Friend WithEvents ToolStripButton1 As ToolStripButton
+    Friend WithEvents btn_gravar As ToolStripButton
     Friend WithEvents ToolStripButton2 As ToolStripButton
     Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
