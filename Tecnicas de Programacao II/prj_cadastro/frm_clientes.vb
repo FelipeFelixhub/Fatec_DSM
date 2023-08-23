@@ -44,4 +44,19 @@
             MsgBox("Erro ao gravar!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
         End Try
     End Sub
+
+    Private Sub txt_cpf_LostFocus(sender As Object, e As EventArgs) Handles txt_cpf.LostFocus
+        Try
+            SQL = "SELECT * FROM cadastro WHERE cpf = '" & txt_cpf.Text & "'"
+            rs = db.Execute(SQL)
+            If rs.EOF = False Then
+                txt_nome.Text = rs.Fields(2).Value
+                img_foto.Load(rs.Fields(3).Value)
+            Else
+                txt_nome.Focus()
+            End If
+        Catch ex As Exception
+            MsgBox("ERRO | Consulta ao CPF no banco!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
+        End Try
+    End Sub
 End Class
