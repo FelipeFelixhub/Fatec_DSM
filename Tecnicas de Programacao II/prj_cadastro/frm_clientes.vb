@@ -15,7 +15,7 @@
 
     Private Sub frm_clientes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         conectar_banco()
-
+        carregar_dados()
     End Sub
 
     Private Sub TabPage1_Click(sender As Object, e As EventArgs) Handles TabPage1.Click
@@ -35,6 +35,7 @@
                 txt_nome.Clear()
                 img_foto.Load(Application.StartupPath & "\Fotos\nova_foto.png")
                 txt_cpf.Focus()
+                carregar_dados()
             Else
                 MsgBox("CPF já cadastrado!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
                 Exit Sub

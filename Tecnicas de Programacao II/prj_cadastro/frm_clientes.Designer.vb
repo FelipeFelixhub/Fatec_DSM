@@ -36,13 +36,18 @@ Partial Class frm_clientes
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txt_cpf = New System.Windows.Forms.MaskedTextBox()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.dgv_dados = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewImageColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewImageColumn()
         CType(Me.img_foto, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.ToolStrip1.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'img_foto
@@ -163,7 +168,7 @@ Partial Class frm_clientes
         '
         'TabPage2
         '
-        Me.TabPage2.Controls.Add(Me.DataGridView1)
+        Me.TabPage2.Controls.Add(Me.dgv_dados)
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
@@ -172,13 +177,56 @@ Partial Class frm_clientes
         Me.TabPage2.Text = "LISTAGEM GERAL"
         Me.TabPage2.UseVisualStyleBackColor = True
         '
-        'DataGridView1
+        'dgv_dados
         '
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Location = New System.Drawing.Point(18, 26)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(731, 331)
-        Me.DataGridView1.TabIndex = 0
+        Me.dgv_dados.AllowUserToAddRows = False
+        Me.dgv_dados.AllowUserToDeleteRows = False
+        Me.dgv_dados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells
+        Me.dgv_dados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells
+        Me.dgv_dados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgv_dados.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5})
+        Me.dgv_dados.Location = New System.Drawing.Point(18, 26)
+        Me.dgv_dados.Name = "dgv_dados"
+        Me.dgv_dados.ReadOnly = True
+        Me.dgv_dados.Size = New System.Drawing.Size(731, 331)
+        Me.dgv_dados.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Nº"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Width = 44
+        '
+        'Column2
+        '
+        Me.Column2.HeaderText = "CPF DO CLIENTE"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 109
+        '
+        'Column3
+        '
+        Me.Column3.HeaderText = "NOME DO CLIENTE"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 120
+        '
+        'Column4
+        '
+        Me.Column4.HeaderText = "EDITAR"
+        Me.Column4.Image = CType(resources.GetObject("Column4.Image"), System.Drawing.Image)
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 53
+        '
+        'Column5
+        '
+        Me.Column5.HeaderText = "APAGAR"
+        Me.Column5.Image = CType(resources.GetObject("Column5.Image"), System.Drawing.Image)
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 57
         '
         'frm_clientes
         '
@@ -197,7 +245,7 @@ Partial Class frm_clientes
         Me.TabPage1.ResumeLayout(False)
         Me.TabPage1.PerformLayout()
         Me.TabPage2.ResumeLayout(False)
-        CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgv_dados, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -216,5 +264,10 @@ Partial Class frm_clientes
     Friend WithEvents Label2 As Label
     Friend WithEvents txt_nome As TextBox
     Friend WithEvents Label1 As Label
-    Friend WithEvents DataGridView1 As DataGridView
+    Friend WithEvents dgv_dados As DataGridView
+    Friend WithEvents Column1 As DataGridViewTextBoxColumn
+    Friend WithEvents Column2 As DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As DataGridViewImageColumn
+    Friend WithEvents Column5 As DataGridViewImageColumn
 End Class
