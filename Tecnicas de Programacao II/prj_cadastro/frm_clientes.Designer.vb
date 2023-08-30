@@ -26,8 +26,12 @@ Partial Class frm_clientes
         Me.img_foto = New System.Windows.Forms.PictureBox()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.btn_gravar = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton3 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
+        Me.txt_busca = New System.Windows.Forms.ToolStripTextBox()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ToolStripLabel2 = New System.Windows.Forms.ToolStripLabel()
+        Me.cmb_tipo = New System.Windows.Forms.ToolStripComboBox()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
@@ -64,7 +68,7 @@ Partial Class frm_clientes
         'ToolStrip1
         '
         Me.ToolStrip1.BackColor = System.Drawing.SystemColors.ActiveBorder
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.ToolStripButton2, Me.ToolStripButton3})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.btn_gravar, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.txt_busca, Me.ToolStripSeparator2, Me.ToolStripLabel2, Me.cmb_tipo})
         Me.ToolStrip1.Location = New System.Drawing.Point(0, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
         Me.ToolStrip1.Size = New System.Drawing.Size(800, 25)
@@ -81,25 +85,38 @@ Partial Class frm_clientes
         Me.btn_gravar.Text = "ToolStripButton1"
         Me.btn_gravar.ToolTipText = "GRAVAR"
         '
-        'ToolStripButton2
+        'ToolStripSeparator1
         '
-        Me.ToolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton2.Image = CType(resources.GetObject("ToolStripButton2.Image"), System.Drawing.Image)
-        Me.ToolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton2.Name = "ToolStripButton2"
-        Me.ToolStripButton2.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton2.Text = "ToolStripButton2"
-        Me.ToolStripButton2.ToolTipText = "CONSULTAR"
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(6, 25)
         '
-        'ToolStripButton3
+        'ToolStripLabel1
         '
-        Me.ToolStripButton3.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.ToolStripButton3.Image = CType(resources.GetObject("ToolStripButton3.Image"), System.Drawing.Image)
-        Me.ToolStripButton3.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton3.Name = "ToolStripButton3"
-        Me.ToolStripButton3.Size = New System.Drawing.Size(23, 22)
-        Me.ToolStripButton3.Text = "ToolStripButton3"
-        Me.ToolStripButton3.ToolTipText = "EXCLUIR"
+        Me.ToolStripLabel1.Name = "ToolStripLabel1"
+        Me.ToolStripLabel1.Size = New System.Drawing.Size(185, 22)
+        Me.ToolStripLabel1.Text = "Digite um parametro de pesquisa:"
+        '
+        'txt_busca
+        '
+        Me.txt_busca.Font = New System.Drawing.Font("Segoe UI", 9.0!)
+        Me.txt_busca.Name = "txt_busca"
+        Me.txt_busca.Size = New System.Drawing.Size(100, 25)
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(6, 25)
+        '
+        'ToolStripLabel2
+        '
+        Me.ToolStripLabel2.Name = "ToolStripLabel2"
+        Me.ToolStripLabel2.Size = New System.Drawing.Size(121, 22)
+        Me.ToolStripLabel2.Text = "Selecione um campo:"
+        '
+        'cmb_tipo
+        '
+        Me.cmb_tipo.Name = "cmb_tipo"
+        Me.cmb_tipo.Size = New System.Drawing.Size(121, 25)
         '
         'OpenFileDialog1
         '
@@ -254,8 +271,6 @@ Partial Class frm_clientes
     Friend WithEvents img_foto As PictureBox
     Friend WithEvents ToolStrip1 As ToolStrip
     Friend WithEvents btn_gravar As ToolStripButton
-    Friend WithEvents ToolStripButton2 As ToolStripButton
-    Friend WithEvents ToolStripButton3 As ToolStripButton
     Friend WithEvents OpenFileDialog1 As OpenFileDialog
     Friend WithEvents TabControl1 As TabControl
     Friend WithEvents TabPage1 As TabPage
@@ -270,4 +285,10 @@ Partial Class frm_clientes
     Friend WithEvents Column3 As DataGridViewTextBoxColumn
     Friend WithEvents Column4 As DataGridViewImageColumn
     Friend WithEvents Column5 As DataGridViewImageColumn
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As ToolStripLabel
+    Friend WithEvents txt_busca As ToolStripTextBox
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents ToolStripLabel2 As ToolStripLabel
+    Friend WithEvents cmb_tipo As ToolStripComboBox
 End Class

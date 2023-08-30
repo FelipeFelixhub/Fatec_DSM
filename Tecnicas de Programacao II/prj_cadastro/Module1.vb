@@ -1,8 +1,23 @@
 ﻿Module Module1
-    Public diretorio, SQL As String
+    Public diretorio, SQL, aux_cpf, resp As String
     Public db As New ADODB.Connection
     Public rs As New ADODB.Recordset
     Public cont As Integer
+
+
+    Sub carregar_tipo()
+        Try
+            With frm_clientes.cmb_tipo.Items
+                .Add("CPF")
+                .Add("Nome")
+            End With
+            frm_clientes.cmb_tipo.SelectedIndex = 1
+        Catch ex As Exception
+            MsgBox("Erro ao carregar!!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "ATENÇÃO")
+
+        End Try
+    End Sub
+
 
     Sub carregar_dados()
         Try
