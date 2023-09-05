@@ -1,4 +1,7 @@
-﻿Public Class frm_clientes
+﻿Imports System.Dynamic
+Imports System.Runtime.CompilerServices
+
+Public Class frm_clientes
     Private Sub img_foto_Click(sender As Object, e As EventArgs) Handles img_foto.Click
         Try
             With OpenFileDialog1
@@ -28,20 +31,24 @@
         Try
             SQL = "select * from cadastro where cpf= '" & txt_cpf.Text & "'"
             rs = db.Execute(SQL)
+
             If rs.EOF = True Then 'Se nao existir o cpf entao'
                 SQL = "insert into cadastro (cpf,nome,foto) values ('" & txt_cpf.Text & "'," &
                     "'" & txt_nome.Text & "','" & diretorio & "')"
                 rs = db.Execute(UCase(SQL))
                 MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
-                txt_cpf.Clear()
-                txt_nome.Clear()
-                img_foto.Load(Application.StartupPath & "\Fotos\nova_foto.png")
-                txt_cpf.Focus()
-                carregar_dados()
             Else
-                MsgBox("CPF já cadastrado!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
-                Exit Sub
+                SQL = "update cadastro set nome = '" & txt_nome.Text & "'," &
+                    "foto='" & diretorio & "' where cpf='" & txt_cpf.Text & "' "
+                rs = db.Execute(UCase(SQL))
+
+                MsgBox("Dados gravados com sucesso!", MsgBoxStyle.Information + MsgBoxStyle.OkOnly, "AVISO")
             End If
+            txt_cpf.Clear()
+            txt_nome.Clear()
+            img_foto.Load(Application.StartupPath & "\Fotos\nova_foto.png")
+            txt_cpf.Focus()
+            carregar_dados()
 
         Catch ex As Exception
             MsgBox("Erro ao gravar!", MsgBoxStyle.Critical + MsgBoxStyle.OkOnly, "AVISO")
@@ -94,6 +101,7 @@
                     rs = db.Execute(SQL)
                     If rs.EOF = False Then
                         TabControl1.SelectTab(0) 'Focando na aba dados pessoais
+                        diretorio = rs.Fields(3).Value
                         txt_cpf.Text = rs.Fields(1).Value
                         txt_nome.Text = rs.Fields(2).Value
                         img_foto.Load(rs.Fields(3).Value)
