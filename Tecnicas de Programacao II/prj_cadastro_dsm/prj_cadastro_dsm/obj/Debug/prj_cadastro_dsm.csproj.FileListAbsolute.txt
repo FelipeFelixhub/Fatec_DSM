@@ -1,0 +1,10 @@
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\bin\Debug\prj_cadastro_dsm.exe.config
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\bin\Debug\prj_cadastro_dsm.exe
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\bin\Debug\prj_cadastro_dsm.pdb
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.csproj.AssemblyReference.cache
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.Form1.resources
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.Properties.Resources.resources
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.csproj.GenerateResource.cache
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.csproj.CoreCompileInputs.cache
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.exe
+C:\Users\lab5.LABTEC\Desktop\prj_cadastro_dsm\prj_cadastro_dsm\obj\Debug\prj_cadastro_dsm.pdb
